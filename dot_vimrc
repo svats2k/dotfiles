@@ -1,0 +1,30 @@
+set number          " set line number
+syntax on           " syntax highlighting
+colorscheme industry
+set tabstop=2       " number of visual spaces per TAB
+set autoindent
+set expandtab       " tabs are spaces
+set softtabstop=2   " number of spaces in tab when editing
+set shiftwidth=2
+"set cursorline
+set showcmd " show command in bottom bar
+
+filetype indent on  " load filetype-specific indent files
+
+set wildmenu        " visual autocomplete for command menu
+
+set lazyredraw      " redraw only when we need to
+
+set showmatch       " highlight matching [{()}]
+
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
+noremap <leader><sapce> :nohlsearch<CR>
+
+set foldenable      " enable folding
+
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
