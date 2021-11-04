@@ -5,7 +5,7 @@
   stripComponents = 1
   refreshPeriod = "168h"
 
-[".zsh/zsh-autosuggestions]
+[".zsh/zsh-autosuggestions"]
   type = "archive"
   url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
   exact = true
