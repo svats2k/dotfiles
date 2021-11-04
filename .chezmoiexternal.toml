@@ -19,11 +19,8 @@
   stripComponents = 1
   refreshPeriod = "168h"
 
-{{- if and (not .ephemeral) (not .headless) }}
-{{-   $fontDir := "" }}
-{{-   if eq .chezmoi.os "linux" }}
-{{-     $fontDir = ".local/share/fonts" }}
-{{-   end }}
+{{- if eq .chezmoi.os "linux" }}
+{{-   $fontDir = ".local/share/fonts" }}
 ["{{ $fontDir }}/MesloLGS NF Regular.ttf"]
     type = "file"
     url = "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Regular.ttf"
