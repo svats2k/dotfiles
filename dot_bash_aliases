@@ -25,7 +25,7 @@ alias ....='cd ../../..'             # 3 Back
 alias ...='cd ../..'                 # 2 Back
 alias ..='cd ..'                     # 1 Back
 
-
+# vi 
 alias vim='nvim'
 alias vi='nvim'
 
@@ -33,3 +33,11 @@ alias vi='nvim'
 alias df='df -h'
 alias du='du -h'
 
+#ubuntu update
+alias upd="sudo apt-get update; sudo apt-get -y upgrade"
+
+# Work related
+alias pdef="source ~/py_envs/pdef/bin/activate"
+alias ovpn="sudo openvpn --config ~/sft_installs/srivatsas__ssl_vpn_config.ovpn"
+alias fuseki='/home/srivatsas/sft_installs/apache-jena-fuseki-4.2.0/fuseki-server --update --mem /ds'
+alias blaze='java -server -Xmx4g -jar /home/srivatsas/sft_installs/blazegraph.jar'
