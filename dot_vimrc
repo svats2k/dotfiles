@@ -1,12 +1,21 @@
+set exrc            " Custom .vimrx file in the project directory gets precedence
+
+set relativenumber
 set number          " set line number
+
+set hidden          " helps keep things in background
+set noerrorbells
 syntax on           " syntax highlighting
 colorscheme industry
-set tabstop=2       " number of visual spaces per TAB
+
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4
+
+set smartindent
 set autoindent
 set expandtab       " tabs are spaces
-set softtabstop=2   " number of spaces in tab when editing
-set shiftwidth=2
-"set cursorline
+
 set showcmd " show command in bottom bar
 
 filetype indent on  " load filetype-specific indent files
@@ -23,8 +32,30 @@ noremap <leader><sapce> :nohlsearch<CR>
 
 set foldenable      " enable folding
 
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
+set scrolloff=8
+set signcolumn=yes
+set colorcolumn=80
+
+" Plugins will be downloaded under the specified directory
+call plug#begin('~/.vim/plugged')
+
+" Declare list of plugins
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
+
+colorscheme gruvbox
+set background=dark
+highlight Normal guibg=none
