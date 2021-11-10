@@ -41,3 +41,4 @@ alias pdef="source ~/py_envs/pdef/bin/activate"
 alias ovpn="sudo openvpn --config ~/sft_installs/srivatsas__ssl_vpn_config.ovpn"
 alias fuseki='/home/srivatsas/sft_installs/apache-jena-fuseki-4.2.0/fuseki-server --update --mem /ds'
 alias blaze='java -server -Xmx4g -jar /home/srivatsas/sft_installs/blazegraph.jar'
+alias cod="sudo chown -R $(id -u):$(id -g) *"
