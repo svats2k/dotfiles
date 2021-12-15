@@ -41,21 +41,5 @@ set scrolloff=8
 set signcolumn=yes
 set colorcolumn=80
 
-" Plugins will be downloaded under the specified directory
-call plug#begin('~/.vim/plugged')
-
-" Declare list of plugins
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-
-call plug#end()
-
-colorscheme gruvbox
 set background=dark
 highlight Normal guibg=none
