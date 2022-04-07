@@ -12,6 +12,19 @@ alias ltr="ls -Altr"                # Sort by time (reverse)
 alias lss="ls -AFlS"                # Sort by size
 alias lsr="ls -AFlSr"               # Sort by size (reverse)
 
+# exa aliases
+alias ea="exa -aF"                   # List all files
+alias ed="exa -d */"                 # List only directories
+alias et="exa -T "                   # Tree view level {}
+alias e.="exa -a | egrep '^\.'"      # List only dotfiles (hidden files)
+alias e1='exa -1aF'                  # List files (one line at a time)
+alias el="exa -lhaF"                 # List all file details
+alias eg="exa -aF | grep"            # Grep through filenames (also see, hg)
+alias ep="exa -d `pwd`/*"            # List full paths
+alias epg="exa -d `pwd`/* | grep"    # Grep through filenames but list full path
+alias etl2="exa -T -L 2"             # Tree view level 2
+alias et="exa -lhaF -s mod"          # list by date modified
+
 # tar aliases
 alias tarc="tar czvf"
 alias tarx="tar xzvf"
@@ -42,3 +55,11 @@ alias ovpn="sudo openvpn --config ~/sft_installs/srivatsas__ssl_vpn_config.ovpn"
 alias fuseki='/home/srivatsas/sft_installs/apache-jena-fuseki-4.2.0/fuseki-server --update --mem /ds'
 alias blaze='java -server -Xmx4g -jar /home/srivatsas/sft_installs/blazegraph.jar'
 alias cod="sudo chown -R $(id -u):$(id -g) *"
+
+alias startdss="/home/srivatsas/sft_installs/DATA_DIR/bin/dss start"
+alias stopdss="/home/srivatsas/sft_installs/DATA_DIR/bin/dss stop"
+alias githubio="bundle exec jekyll serve --drafts --livereload"
+alias dpkg_nvidia="dpkg -l | grep -i nvidia"
+alias mypy="mypy --ignore-missing-imports"
+alias cat="batcat"
+alias als="aws s3 ls s3://amagitornado-test/"
